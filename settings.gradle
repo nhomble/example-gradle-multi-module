@@ -1,0 +1,9 @@
+rootProject.name = 'example-gradle-multi-module'
+
+include "example-sub-dependency-1"
+include "example-sub-dependency-2"
+include "example-app"
+
+project(':example-sub-dependency-1').projectDir = file('example-sub-dependency-1')
+project(':example-sub-dependency-2').projectDir = file('example-sub-dependency-2')
+project(':example-app').projectDir = file('example-app')
